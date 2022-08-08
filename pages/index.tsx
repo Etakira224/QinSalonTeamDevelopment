@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { ArticleCard } from "../components/ArticleCard";
 import { Footer } from "../components/organisms/Footer";
 import { HeaderMenuColored } from "../components/organisms/HeaderMenuColored";
@@ -11,6 +10,7 @@ import { BlogSection } from "../components/organisms/BlogSection";
 import { PortfolioSection } from "../components/organisms/PortfolioSection";
 import { GitHubSection } from "../components/organisms/GitHubSection";
 import { TwitterSection } from "../components/organisms/TwitterSection";
+import { Grid } from "@mantine/core";
 
 const Home: NextPage = () => {
   return (
@@ -26,6 +26,13 @@ const Home: NextPage = () => {
       <Hero />
 
       <main className={styles.main}>
+        <Grid grow>
+          <Grid.Col span={4}>1</Grid.Col>
+          <Grid.Col span={4}>2</Grid.Col>
+          <Grid.Col span={4}>3</Grid.Col>
+          <Grid.Col span={4}>4</Grid.Col>
+          <Grid.Col span={4}>5</Grid.Col>
+        </Grid>
         <BlogSection />
         <PortfolioSection />
         <GitHubSection />
@@ -45,40 +52,6 @@ const Home: NextPage = () => {
 
         <HorizontalDevider />
 
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
       </main>
 
       <Footer links={[]} />
