@@ -1,4 +1,4 @@
-import { IconBookmark, IconHeart, IconShare } from '@tabler/icons';
+import { IconBookmark, IconHeart, IconShare } from "@tabler/icons";
 import {
   Card,
   Image,
@@ -9,31 +9,38 @@ import {
   Center,
   Avatar,
   createStyles,
-} from '@mantine/core';
+} from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
   card: {
-    position: 'relative',
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+    position: "relative",
+    backgroundColor:
+      theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
   },
 
   rating: {
-    position: 'absolute',
+    position: "absolute",
     top: theme.spacing.xs,
     right: theme.spacing.xs + 2,
-    pointerEvents: 'none',
+    pointerEvents: "none",
   },
 
   title: {
-    display: 'block',
+    display: "block",
     marginTop: theme.spacing.md,
     marginBottom: theme.spacing.xs / 2,
   },
 
   action: {
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    backgroundColor:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[6]
+        : theme.colors.gray[0],
     ...theme.fn.hover({
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
+      backgroundColor:
+        theme.colorScheme === "dark"
+          ? theme.colors.dark[5]
+          : theme.colors.gray[1],
     }),
   },
 
@@ -63,19 +70,33 @@ export function ArticleCard({
   author,
   rating,
   ...others
-}: ArticleCardProps & Omit<React.ComponentPropsWithoutRef<'div'>, keyof ArticleCardProps>) {
+}: ArticleCardProps &
+  Omit<React.ComponentPropsWithoutRef<"div">, keyof ArticleCardProps>) {
   const { classes, cx, theme } = useStyles();
-  const linkProps = { href: link, target: '_blank', rel: 'noopener noreferrer' };
+  const linkProps = {
+    href: link,
+    target: "_blank",
+    rel: "noopener noreferrer",
+  };
 
   return (
-    <Card withBorder radius="md" className={cx(classes.card, className)} {...others}>
+    <Card
+      withBorder
+      radius="md"
+      className={cx(classes.card, className)}
+      {...others}
+    >
       <Card.Section>
         <a {...linkProps}>
           <Image src={image} height={180} />
         </a>
       </Card.Section>
 
-      <Badge className={classes.rating} variant="gradient" gradient={{ from: 'yellow', to: 'red' }}>
+      <Badge
+        className={classes.rating}
+        variant="gradient"
+        gradient={{ from: "yellow", to: "red" }}
+      >
         {rating}
       </Badge>
 
