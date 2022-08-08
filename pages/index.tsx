@@ -7,6 +7,10 @@ import { HeaderMenuColored } from "../components/organisms/HeaderMenuColored";
 import { HorizontalDevider } from "../components/HorizontalDevider";
 import styles from "../styles/Home.module.css";
 import { Hero } from "../components/organisms/Hero";
+import { Blog } from "../components/organisms/Blog";
+import { Portfolio } from "../components/organisms/Portfolio";
+import { GitHub } from "../components/organisms/GitHub";
+import { Twitter } from "../components/organisms/Twitter";
 
 const Home: NextPage = () => {
   return (
@@ -22,9 +26,10 @@ const Home: NextPage = () => {
       <Hero />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <Blog />
+        <Portfolio />
+        <GitHub />
+        <Twitter />
 
         <ArticleCard
           image={""}
