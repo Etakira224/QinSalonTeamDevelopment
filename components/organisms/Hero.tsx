@@ -6,7 +6,9 @@ const useStyles = createStyles((theme) => ({
   wrapper: {
     position: 'relative',
     paddingTop: 120,
+    paddingLeft: '15%',
     paddingBottom: 80,
+    paddingRight: '15%',
     backgroundColor: '#E64980',
 
     '@media (max-width: 755px)': {

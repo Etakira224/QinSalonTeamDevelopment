@@ -18,6 +18,8 @@ const useStyles = createStyles((theme) => ({
     }).background,
     borderBottom: 0,
     width: "100%",
+    paddingLeft: '15%',
+    paddingRight: '15%',
   },
 
   inner: {
