@@ -4,13 +4,13 @@ import Image from "next/image";
 import { ArticleCard } from "../components/ArticleCard";
 import { Footer } from "../components/organisms/Footer";
 import { HeaderMenuColored } from "../components/organisms/HeaderMenuColored";
-import { HorizontalDevider } from "../components/HorizontalDevider";
+import { HorizontalDevider } from "../components/atoms/HorizontalDevider";
 import styles from "../styles/Home.module.css";
 import { Hero } from "../components/organisms/Hero";
-import { Blog } from "../components/organisms/Blog";
-import { Portfolio } from "../components/organisms/Portfolio";
-import { GitHub } from "../components/organisms/GitHub";
-import { Twitter } from "../components/organisms/Twitter";
+import { BlogSection } from "../components/organisms/BlogSection";
+import { PortfolioSection } from "../components/organisms/PortfolioSection";
+import { GitHubSection } from "../components/organisms/GitHubSection";
+import { TwitterSection } from "../components/organisms/TwitterSection";
 
 const Home: NextPage = () => {
   return (
@@ -26,10 +26,10 @@ const Home: NextPage = () => {
       <Hero />
 
       <main className={styles.main}>
-        <Blog />
-        <Portfolio />
-        <GitHub />
-        <Twitter />
+        <BlogSection />
+        <PortfolioSection />
+        <GitHubSection />
+        <TwitterSection />
 
         <ArticleCard
           image={""}
