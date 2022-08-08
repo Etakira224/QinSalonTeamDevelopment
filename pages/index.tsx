@@ -2,10 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { ArticleCard } from "../components/ArticleCard";
-import { FooterSimple } from "../components/FooterSimple";
-import { HeaderMenuColored } from "../components/Header";
+import { Footer } from "../components/organisms/Footer";
+import { HeaderMenuColored } from "../components/organisms/HeaderMenuColored";
 import { HorizontalDevider } from "../components/HorizontalDevider";
 import styles from "../styles/Home.module.css";
+import { Hero } from "../components/organisms/Hero";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,8 @@ const Home: NextPage = () => {
       </Head>
 
       <HeaderMenuColored links={[]} />
+
+      <Hero />
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -73,7 +76,7 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <FooterSimple links={[]} />
+      <Footer links={[]} />
     </div>
   );
 };
