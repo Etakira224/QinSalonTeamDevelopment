@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { ArticleCard } from "../components/ArticleCard";
 import { Footer } from "../components/organisms/Footer";
-import { HeaderMenuColored } from "../components/organisms/HeaderMenuColored";
+import { GeneralHeader } from "../components/organisms/GeneralHeader";
 import { HorizontalDevider } from "../components/atoms/HorizontalDevider";
 import styles from "../styles/Home.module.css";
 import { Hero } from "../components/organisms/Hero";
@@ -21,7 +20,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HeaderMenuColored links={[]} />
+      <GeneralHeader links={[]} />
 
       <Hero />
 
@@ -38,20 +37,7 @@ const Home: NextPage = () => {
         <GitHubSection />
         <TwitterSection />
 
-        <ArticleCard
-          image={""}
-          link={""}
-          title={""}
-          description={""}
-          rating={""}
-          author={{
-            name: "",
-            image: "",
-          }}
-        />
-
         <HorizontalDevider />
-
       </main>
 
       <Footer links={[]} />

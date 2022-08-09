@@ -12,14 +12,15 @@ import { DarkColorToggle } from "../DarkColorToggle";
 
 const useStyles = createStyles((theme) => ({
   header: {
-    backgroundColor: theme.fn.variant({
-      variant: "filled",
-      color: theme.primaryColor,
-    }).background,
+    // backgroundColor: theme.fn.variant({
+    //   variant: "filled",
+    //   color: theme.primaryColor,
+    // }).background,
+    backgroundColor: theme.white,
     borderBottom: 0,
     width: "100%",
-    paddingLeft: '15%',
-    paddingRight: '15%',
+    paddingLeft: "15%",
+    paddingRight: "15%",
   },
 
   inner: {
@@ -73,7 +74,7 @@ interface HeaderSearchProps {
   }[];
 }
 
-export const HeaderMenuColored = ({ links }: HeaderSearchProps) => {
+export const GeneralHeader = ({ links }: HeaderSearchProps) => {
   const [opened, { toggle }] = useDisclosure(false);
   const { classes } = useStyles();
 
@@ -114,7 +115,7 @@ export const HeaderMenuColored = ({ links }: HeaderSearchProps) => {
   });
 
   return (
-    <Header height={40} className={classes.header} mb={0}>
+    <Header height="fit-content" className={classes.header} mb={0}>
       <Container>
         <div className={classes.inner}>
           <Group spacing={5} className={classes.links}>
@@ -125,7 +126,7 @@ export const HeaderMenuColored = ({ links }: HeaderSearchProps) => {
             onClick={toggle}
             className={classes.burger}
             size="sm"
-            color="#fff"
+            color="#25262B"
           />
         </div>
         {/* <DarkColorToggle /> */}

@@ -1,33 +1,55 @@
-import { createStyles, Title, Text, Button, Container, ActionIcon, Group } from '@mantine/core';
+import {
+  createStyles,
+  Title,
+  Text,
+  Button,
+  Container,
+  ActionIcon,
+  Group,
+} from "@mantine/core";
 // import { Dots } from './Dots';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import {
+  IconBrandTwitter,
+  IconBrandYoutube,
+  IconBrandInstagram,
+  IconBrandFacebook,
+} from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    position: 'relative',
+    position: "relative",
     paddingTop: 120,
-    paddingLeft: '15%',
+    paddingLeft: "15%",
     paddingBottom: 80,
-    paddingRight: '15%',
-    backgroundColor: '#E64980',
+    paddingRight: "15%",
+    backgroundColor: "#E64980",
 
-    '@media (max-width: 755px)': {
+    "@media (max-width: 755px)": {
       paddingTop: 80,
       paddingBottom: 60,
     },
   },
 
   inner: {
-    position: 'relative',
+    position: "relative",
     zIndex: 1,
+    display: "flex",
+    justifyContent: "space-between",
+    "@media (max-width: 755px)": {
+      flexDirection: "column",
+      alignItems: "flex-start",
+    },
   },
 
   dots: {
-    position: 'absolute',
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
+    position: "absolute",
+    color:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[5]
+        : theme.colors.gray[1],
 
-    '@media (max-width: 755px)': {
-      display: 'none',
+    "@media (max-width: 755px)": {
+      display: "none",
     },
   },
 
@@ -37,60 +59,62 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    textAlign: 'center',
+    textAlign: "center",
     fontWeight: 800,
     fontSize: 40,
     letterSpacing: -1,
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    // color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    color: theme.white,
     marginBottom: theme.spacing.xs,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 
-    '@media (max-width: 520px)': {
+    "@media (max-width: 520px)": {
       fontSize: 28,
-      textAlign: 'left',
+      textAlign: "left",
     },
   },
 
   highlight: {
-    color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 4 : 6],
+    color:
+      theme.colors[theme.primaryColor][theme.colorScheme === "dark" ? 4 : 6],
   },
 
   description: {
-    textAlign: 'center',
-
-    '@media (max-width: 520px)': {
-      textAlign: 'left',
+    textAlign: "center",
+    color: theme.white,
+    "@media (max-width: 520px)": {
+      textAlign: "left",
       fontSize: theme.fontSizes.md,
     },
   },
 
   controls: {
     marginTop: theme.spacing.lg,
-    display: 'flex',
-    justifyContent: 'center',
+    display: "flex",
+    justifyContent: "center",
 
-    '@media (max-width: 520px)': {
-      flexDirection: 'column',
+    "@media (max-width: 520px)": {
+      flexDirection: "column",
     },
   },
 
   control: {
-    '&:not(:first-of-type)': {
+    "&:not(:first-of-type)": {
       marginLeft: theme.spacing.md,
     },
 
-    '@media (max-width: 520px)': {
+    "@media (max-width: 520px)": {
       height: 42,
       fontSize: theme.fontSizes.md,
 
-      '&:not(:first-of-type)': {
+      "&:not(:first-of-type)": {
         marginTop: theme.spacing.md,
         marginLeft: 0,
       },
     },
   },
   social: {
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan("sm")]: {
       marginTop: theme.spacing.xs,
     },
   },
@@ -109,26 +133,22 @@ export function Hero() {
       <div className={classes.inner}>
         <Title className={classes.title}>
           Shimabu IT University
-          <br />
-          しまぶーのポートフォリオのためのページです
-        </Title>
-
-        <Container p={0} size={600}>
           <Text size="lg" color="dimmed" className={classes.description}>
             しまぶーのポートフォリオのためのページです
           </Text>
-        </Container>
+        </Title>
+
 
         <div className={classes.controls}>
           <Group spacing={0} className={classes.social} position="right" noWrap>
             <ActionIcon size="lg">
-              <IconBrandTwitter size={18} stroke={1.5} />
+              <IconBrandTwitter size={18} stroke={1.5} color="white" />
             </ActionIcon>
             <ActionIcon size="lg">
-              <IconBrandYoutube size={18} stroke={1.5} />
+              <IconBrandFacebook size={18} stroke={1.5} color="white" />
             </ActionIcon>
             <ActionIcon size="lg">
-              <IconBrandInstagram size={18} stroke={1.5} />
+              <IconBrandInstagram size={18} stroke={1.5} color="white" />
             </ActionIcon>
           </Group>
         </div>

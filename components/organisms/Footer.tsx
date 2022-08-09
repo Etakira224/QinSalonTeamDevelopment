@@ -1,9 +1,9 @@
-import { createStyles, Container, Group, Anchor } from '@mantine/core';
+import { createStyles, Container, Group, Anchor, Text } from '@mantine/core';
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    marginTop: 120,
+    marginTop: 0,
     borderTop: `1px solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
@@ -50,6 +50,7 @@ export function Footer({ links }: FooterSimpleProps) {
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <MantineLogo size={28} />
+        <Text size="sm">© ️2022 Shimabu IT University</Text>
         <Group className={classes.links}>{items}</Group>
       </Container>
     </div>

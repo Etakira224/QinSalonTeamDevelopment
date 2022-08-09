@@ -1,13 +1,13 @@
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
-import { Footer } from '../organisms/Footer';
-import { HeaderMenuColored } from '../organisms/HeaderMenuColored';
+import { ReactElement } from "react";
+import { Footer } from "../organisms/Footer";
+import { GeneralHeader } from "../organisms/GeneralHeader";
 
 export const HeaderFooterTemplate = (props: { children: ReactElement }) => {
   return (
     <div>
-      <HeaderMenuColored links={[]} />
+      <GeneralHeader links={[]} />
       {props.children}
       <Footer links={[]} />
     </div>
-  )
-}
+  );
+};
