@@ -1,9 +1,11 @@
 import { HeaderFooterTemplate } from "../components/templates/HeaderFooterTemplate"
 
-export const Portfolio = () => {
+function Portfolio () {
   return (
     <HeaderFooterTemplate>
       <div></div>
     </HeaderFooterTemplate>
   )
 }
+
+export default Portfolio;

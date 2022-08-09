@@ -1,9 +1,11 @@
-import { HeaderFooterTemplate } from "../../components/templates/HeaderFooterTemplate"
+import { HeaderFooterTemplate } from "../../components/templates/HeaderFooterTemplate";
 
-export const Detail = () => {
+function Detail() {
   return (
     <HeaderFooterTemplate>
       <div></div>
     </HeaderFooterTemplate>
-  )
+  );
 }
+
+export default Detail;

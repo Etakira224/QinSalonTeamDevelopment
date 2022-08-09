@@ -1,9 +1,11 @@
 import { HeaderFooterTemplate } from "../components/templates/HeaderFooterTemplate"
 
-export const Contact = () => {
+function Contact () {
   return (
     <HeaderFooterTemplate>
       <div></div>
     </HeaderFooterTemplate>
   )
 }
+
+export default Contact;
