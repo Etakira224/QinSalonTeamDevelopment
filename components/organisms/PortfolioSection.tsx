@@ -4,7 +4,7 @@ import { PortfolioCard } from "../modules/PortfolioCard";
 
 export const PortfolioSection = () => {
   return (
-    <div>
+    <div id="portfolio">
       <Grid>
         <Grid.Col md={6} lg={3}>
           <PortfolioCard />

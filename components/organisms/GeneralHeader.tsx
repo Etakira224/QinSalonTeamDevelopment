@@ -6,9 +6,14 @@ import {
   Center,
   Burger,
   Container,
+  Anchor,
+  Title,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import Link from "next/link";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { DarkColorToggle } from "../DarkColorToggle";
+import Portfolio from '../../pages/Portfolio';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -78,6 +83,7 @@ export const GeneralHeader = ({ links }: HeaderSearchProps) => {
   const [opened, { toggle }] = useDisclosure(false);
   const { classes } = useStyles();
 
+  // itemsの定義。ここは分けてもいいのかもしれない。
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
       <Menu.Item key={item.link}>{item.label}</Menu.Item>
@@ -113,13 +119,29 @@ export const GeneralHeader = ({ links }: HeaderSearchProps) => {
       </a>
     );
   });
+  //上でreturnしたitems変数を下のreturnで使っている感じ。
 
   return (
     <Header height="fit-content" className={classes.header} mb={0}>
       <Container>
         <div className={classes.inner}>
+          <Title order={2}>Shimabu IT University</Title>
           <Group spacing={5} className={classes.links}>
             {items}
+            <ul>
+              <li>
+                <AnchorLink href="#blog">Blog</AnchorLink>
+              </li>
+              <li>
+                <AnchorLink href="#portfolio">Portfolio</AnchorLink>
+              </li>
+              <li>
+                <AnchorLink href="#github">GitHub</AnchorLink>
+              </li>
+              <li>
+                <AnchorLink href="#twitter">Twitter</AnchorLink>
+              </li>
+            </ul>
           </Group>
           <Burger
             opened={opened}
@@ -128,8 +150,8 @@ export const GeneralHeader = ({ links }: HeaderSearchProps) => {
             size="sm"
             color="#25262B"
           />
+          {/* <DarkColorToggle /> */}
         </div>
-        {/* <DarkColorToggle /> */}
       </Container>
     </Header>
   );

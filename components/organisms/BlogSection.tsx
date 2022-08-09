@@ -2,7 +2,7 @@ import { PrimaryButton } from "../atoms/PrimaryButton";
 
 export const BlogSection = () => {
   return (
-    <div>
+    <div id="blog">
       <section>
         {/* 以下ダミーデータ */}
         <article>

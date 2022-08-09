@@ -3,7 +3,7 @@ import { TwitterCard } from "../modules/TwitterCard";
 
 export const TwitterSection = () => {
   return (
-    <div>
+    <div id="twitter">
       <TwitterCard />
       <TwitterCard />
       <TwitterCard />
