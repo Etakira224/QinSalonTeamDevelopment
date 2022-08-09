@@ -1,28 +1,29 @@
-import { createStyles, Container, Group, Anchor, Text } from '@mantine/core';
-import { MantineLogo } from '@mantine/ds';
+import { createStyles, Container, Group, Anchor, Text } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
   footer: {
     marginTop: 0,
+    display: "flex",
+    justifyContent: "center",
     borderTop: `1px solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
+      theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
   },
 
   inner: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
     paddingTop: theme.spacing.xl,
     paddingBottom: theme.spacing.xl,
 
-    [theme.fn.smallerThan('xs')]: {
-      flexDirection: 'column',
+    [theme.fn.smallerThan("xs")]: {
+      flexDirection: "column",
     },
   },
 
   links: {
-    [theme.fn.smallerThan('xs')]: {
+    [theme.fn.smallerThan("xs")]: {
       marginTop: theme.spacing.md,
     },
   },
@@ -35,7 +36,7 @@ interface FooterSimpleProps {
 export function Footer({ links }: FooterSimpleProps) {
   const { classes } = useStyles();
   const items = links.map((link) => (
-    <Anchor<'a'>
+    <Anchor<"a">
       color="dimmed"
       key={link.label}
       href={link.link}
@@ -49,7 +50,6 @@ export function Footer({ links }: FooterSimpleProps) {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <MantineLogo size={28} />
         <Text size="sm">© ️2022 Shimabu IT University</Text>
         <Group className={classes.links}>{items}</Group>
       </Container>
