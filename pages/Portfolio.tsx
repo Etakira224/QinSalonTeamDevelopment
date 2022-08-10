@@ -1,9 +1,10 @@
+import { PortfolioSection } from "../components/organisms/PortfolioSection";
 import { HeaderFooterTemplate } from "../components/templates/HeaderFooterTemplate"
 
 function Portfolio () {
   return (
     <HeaderFooterTemplate>
-      <div></div>
+      <PortfolioSection />
     </HeaderFooterTemplate>
   )
 }

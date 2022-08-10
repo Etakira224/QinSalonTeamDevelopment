@@ -1,5 +1,5 @@
 import { PrimaryButton } from "../atoms/PrimaryButton";
-import { TwitterCard } from "../modules/TwitterCard";
+import { TwitterCard } from "../molecules/TwitterCard";
 
 export const TwitterSection = () => {
   return (
