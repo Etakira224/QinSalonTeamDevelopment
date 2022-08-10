@@ -1,6 +1,6 @@
 import { PrimaryButton } from "../atoms/PrimaryButton";
 import { Grid } from "@mantine/core";
-import { PortfolioCard } from "../modules/PortfolioCard";
+import { PortfolioCard } from "../molecules/PortfolioCard";
 
 export const PortfolioSection = () => {
   return (

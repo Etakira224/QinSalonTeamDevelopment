@@ -6,14 +6,11 @@ import {
   Center,
   Burger,
   Container,
-  Anchor,
   Title,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import Link from "next/link";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { DarkColorToggle } from "../DarkColorToggle";
-import Portfolio from '../../pages/Portfolio';
+import { ThemeColorToggle } from "../atoms/ThemeColorToggle";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -72,12 +69,19 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface HeaderSearchProps {
+  //mantineのサンプルコードそのまま。linksの中にlinksが入っている形で若干ややこしい？
   links: {
     link: string;
     label: string;
     links: { link: string; label: string }[];
   }[];
 }
+
+// const links = [
+//   {
+//     link: 
+//   }
+// ]
 
 export const GeneralHeader = ({ links }: HeaderSearchProps) => {
   const [opened, { toggle }] = useDisclosure(false);
@@ -142,6 +146,7 @@ export const GeneralHeader = ({ links }: HeaderSearchProps) => {
                 <AnchorLink href="#twitter">Twitter</AnchorLink>
               </li>
             </ul>
+            <ThemeColorToggle />
           </Group>
           <Burger
             opened={opened}
