@@ -6,7 +6,7 @@ type Props = {
 
 export const PrimaryButton = (props:Props) => {
   return (
-    <Button color="dark" radius="xl">
+    <Button color="dark" radius="xl" >
       {props.value}
     </Button>
   );

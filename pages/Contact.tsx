@@ -1,6 +1,6 @@
 import { HeaderFooterTemplate } from "../components/templates/HeaderFooterTemplate"
 
-function Contact () {
+function Contact ()  {
   return (
     <HeaderFooterTemplate>
       <div></div>

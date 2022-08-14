@@ -11,6 +11,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { ThemeColorToggle } from "../atoms/ThemeColorToggle";
+import { ModalMenu } from "./ModalMenu";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -34,12 +35,6 @@ const useStyles = createStyles((theme) => ({
 
   links: {
     [theme.fn.smallerThan("sm")]: {
-      display: "none",
-    },
-  },
-
-  burger: {
-    [theme.fn.largerThan("sm")]: {
       display: "none",
     },
   },
@@ -79,7 +74,7 @@ interface HeaderSearchProps {
 
 // const links = [
 //   {
-//     link: 
+//     link:
 //   }
 // ]
 
@@ -148,13 +143,7 @@ export const GeneralHeader = ({ links }: HeaderSearchProps) => {
             </ul>
             <ThemeColorToggle />
           </Group>
-          <Burger
-            opened={opened}
-            onClick={toggle}
-            className={classes.burger}
-            size="sm"
-            color="#25262B"
-          />
+          <ModalMenu />
           {/* <DarkColorToggle /> */}
         </div>
       </Container>
