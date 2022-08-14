@@ -11,6 +11,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { ThemeColorToggle } from "../atoms/ThemeColorToggle";
+import { HeaderMenu } from "../molecules/HeaderMenu";
 import { ModalMenu } from "./ModalMenu";
 
 const useStyles = createStyles((theme) => ({
@@ -127,20 +128,7 @@ export const GeneralHeader = ({ links }: HeaderSearchProps) => {
           <Title order={2}>Shimabu IT University</Title>
           <Group spacing={5} className={classes.links}>
             {items}
-            <ul>
-              <li>
-                <AnchorLink href="#blog">Blog</AnchorLink>
-              </li>
-              <li>
-                <AnchorLink href="#portfolio">Portfolio</AnchorLink>
-              </li>
-              <li>
-                <AnchorLink href="#github">GitHub</AnchorLink>
-              </li>
-              <li>
-                <AnchorLink href="#twitter">Twitter</AnchorLink>
-              </li>
-            </ul>
+            <HeaderMenu />
             <ThemeColorToggle />
           </Group>
           <ModalMenu />

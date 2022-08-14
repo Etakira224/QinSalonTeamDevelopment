@@ -25,17 +25,21 @@ const Home: NextPage = () => {
       <Hero />
 
       <main className={styles.main}>
+        {/* レイアウト変更に対応しやすくする目的で全セクションをグリッドで */}
         <Grid grow>
-          <Grid.Col span={4}>1</Grid.Col>
-          <Grid.Col span={4}>2</Grid.Col>
-          <Grid.Col span={4}>3</Grid.Col>
-          <Grid.Col span={4}>4</Grid.Col>
-          <Grid.Col span={4}>5</Grid.Col>
+          <Grid.Col lg={12} md={12}>
+            <BlogSection />
+          </Grid.Col>
+          <Grid.Col lg={12} md={12}>
+            <PortfolioSection />
+          </Grid.Col>
+          <Grid.Col lg={12} md={6}>
+            <GitHubSection />
+          </Grid.Col>
+          <Grid.Col lg={12} md={6}>
+            <TwitterSection />
+          </Grid.Col>
         </Grid>
-        <BlogSection />
-        <PortfolioSection />
-        <GitHubSection />
-        <TwitterSection />
 
         <HorizontalDevider />
       </main>
