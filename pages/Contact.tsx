@@ -1,11 +1,12 @@
-import { HeaderFooterTemplate } from "../components/templates/HeaderFooterTemplate"
+import { ContactForm } from "../components/organisms/ContactForm";
+import { HeaderFooterTemplate } from "../components/templates/HeaderFooterTemplate";
 
-function Contact ()  {
+function Contact() {
   return (
     <HeaderFooterTemplate>
-      <div></div>
+      <ContactForm />
     </HeaderFooterTemplate>
-  )
+  );
 }
 
 export default Contact;
