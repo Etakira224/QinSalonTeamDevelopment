@@ -1,7 +1,7 @@
 import { BlogCard } from "../../components/molecules/BlogCard";
 import { HeaderFooterTemplate } from "../../components/templates/HeaderFooterTemplate";
 
-function Detail() {
+function EachArticleDetail() {
   return (
     <HeaderFooterTemplate>
       <BlogCard />
@@ -9,4 +9,4 @@ function Detail() {
   );
 }
 
-export default Detail;
+export default EachArticleDetail;

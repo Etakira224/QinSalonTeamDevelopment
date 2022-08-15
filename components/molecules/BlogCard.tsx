@@ -2,23 +2,24 @@ import { Card, Image, Text, Badge, Button, Group, Title } from "@mantine/core";
 
 export const BlogCard = () => {
   return (
-    <Card>
+    //indexをkeyとして付与するのは非推奨。最終的には実データのidにしてね。
+    <Card component="a" href="/Blog/Detail">
       {/* <Card.Section> */}
-        {/* <Text size="md" color="dimmed">
+      {/* <Text size="md" color="dimmed">
           This is a header.
         </Text>
         <Text size="sm">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit.{" "}
         </Text> */}
-        <article>
-          <Title order={3}>This is a header.</Title>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.{" "}
-          </p>
-          <p>2022.08.08</p>
-        </article>
+      <article>
+        <Title order={3}>This is a header.</Title>
+        <p>
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit.{" "}
+        </p>
+        <p>2022.08.08</p>
+      </article>
       {/* </Card.Section> */}
 
       {/* <Group position="apart" mt="md" mb="xs">

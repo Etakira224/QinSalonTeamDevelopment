@@ -33,10 +33,10 @@ const Home: NextPage = () => {
           <Grid.Col lg={12} md={12}>
             <PortfolioSection />
           </Grid.Col>
-          <Grid.Col lg={12} md={6}>
+          <Grid.Col lg={6} md={12}>
             <GitHubSection />
           </Grid.Col>
-          <Grid.Col lg={12} md={6}>
+          <Grid.Col lg={6} md={12}>
             <TwitterSection />
           </Grid.Col>
         </Grid>
