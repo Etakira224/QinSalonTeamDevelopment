@@ -1,21 +1,22 @@
 import { PrimaryButton } from "../atoms/PrimaryButton";
-import { Grid } from "@mantine/core";
+import { Grid, Title } from "@mantine/core";
 import { PortfolioCard } from "../molecules/PortfolioCard";
 
 export const PortfolioSection = () => {
   return (
     <div id="portfolio">
+      <Title order={2}>Portfolio</Title>
       <Grid>
-        <Grid.Col md={6} lg={3}>
+        <Grid.Col md={6} lg={4}>
           <PortfolioCard />
         </Grid.Col>
-        <Grid.Col md={6} lg={3}>
+        <Grid.Col md={6} lg={4}>
           <PortfolioCard />
         </Grid.Col>
-        <Grid.Col md={6} lg={3}>
+        <Grid.Col md={6} lg={4}>
           <PortfolioCard />
         </Grid.Col>
-        <Grid.Col md={6} lg={3}>
+        <Grid.Col md={6} lg={4}>
           <PortfolioCard />
         </Grid.Col>
       </Grid>

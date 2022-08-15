@@ -1,11 +1,11 @@
+import { Title } from "@mantine/core";
 import { ReactElement } from "react";
 import { PrimaryButton } from "../atoms/PrimaryButton";
-import { TitleText } from "../TitleText";
 
 export const SectionTemplate = (props: { children: ReactElement }) => {
   return (
     <div>
-      <TitleText />
+      <Title order={2}></Title>
       {props.children}
       <PrimaryButton value={""} />
     </div>
