@@ -36,6 +36,8 @@ export const ModalMenu = () => {
         // className={classes.modal}
         title="This is fullscreen modal!"
         fullScreen
+        //色もまとめて管理しようよ.なぜか色が変わらない。
+        overlayColor="#E64980"
       >
         {/* Modal content */}
         <ul>

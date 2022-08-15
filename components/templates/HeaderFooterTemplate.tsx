@@ -11,3 +11,6 @@ export const HeaderFooterTemplate = (props: { children: ReactElement }) => {
     </div>
   );
 };
+
+//タイトルのバリエーションをいじれない分カスタマイズ性に欠ける？
+//それに対応した場合propsのバケツリレーが発生するのでuseContext塔で対応？
