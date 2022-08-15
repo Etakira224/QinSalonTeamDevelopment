@@ -5,9 +5,12 @@ export const PortfolioCard = () => {
     <Card shadow="sm" p="lg" radius="md" withBorder>
       <Card.Section>
         <Image
+          //なぜか画像が表示されない
           src="../../public/Thumbnail.png"
           height={160}
-          alt="shimabu-AndHisArmy"
+          // width={100}
+          // fit="contain"
+          alt="shimabuArmy"
         />
       </Card.Section>
 
