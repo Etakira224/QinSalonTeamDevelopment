@@ -9,7 +9,9 @@ export const PortfolioCard = () => {
         <Image
           src="/Thumbnail.png"
           height={160}
-          alt="shimabu-AndHisArmy"
+          // width={100}
+          // fit="contain"
+          alt="shimabuArmy"
         />
       </Card.Section>
 

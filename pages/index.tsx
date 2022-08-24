@@ -9,7 +9,7 @@ import { BlogSection } from "../components/organisms/BlogSection";
 import { PortfolioSection } from "../components/organisms/PortfolioSection";
 import { GitHubSection } from "../components/organisms/GitHubSection";
 import { TwitterSection } from "../components/organisms/TwitterSection";
-import { Grid } from "@mantine/core";
+import { Grid, Space } from "@mantine/core";
 
 const Home: NextPage = () => {
   return (
@@ -24,9 +24,10 @@ const Home: NextPage = () => {
 
       <Hero />
 
+      <Space h="xl" />
       <main className={styles.main}>
         {/* レイアウト変更に対応しやすくする目的で全セクションをグリッドで */}
-        <Grid grow>
+        <Grid grow gutter={50}>
           <Grid.Col lg={12} md={12}>
             <BlogSection />
           </Grid.Col>

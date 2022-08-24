@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { client } from "../../libs/client";
+import { Title } from "@mantine/core";
 import { PrimaryButton } from "../atoms/PrimaryButton";
 import { BlogCard } from "../molecules/BlogCard";
 
@@ -15,6 +16,7 @@ const dummyGen = () => {
 export const BlogSection = (data: any[]) => {
   return (
     <div id="blog">
+      <Title order={2}>Blog</Title>
       <section>
         {/* 以下ダミーデータ */}
         {dummyGen()}
