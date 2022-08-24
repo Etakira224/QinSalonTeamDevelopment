@@ -1,6 +1,5 @@
 import {
   createStyles,
-  Header,
   Menu,
   Group,
   Center,
@@ -8,6 +7,7 @@ import {
   Container,
   Title,
 } from "@mantine/core";
+import {Header as MHeader} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { ThemeColorToggle } from "../atoms/ThemeColorToggle";
@@ -73,13 +73,8 @@ interface HeaderSearchProps {
   }[];
 }
 
-// const links = [
-//   {
-//     link:
-//   }
-// ]
 
-export const GeneralHeader = ({ links }: HeaderSearchProps) => {
+export const MHeader = ({ links }: HeaderSearchProps) => {
   const [opened, { toggle }] = useDisclosure(false);
   const { classes } = useStyles();
 
