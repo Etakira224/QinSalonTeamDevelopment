@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Footer } from "../components/organisms/Footer";
-import { GeneralHeader } from "../components/organisms/GeneralHeader";
+import { Header } from "../components/organisms/Header";
 import { HorizontalDevider } from "../components/atoms/HorizontalDevider";
 import styles from "../styles/Home.module.css";
 import { Hero } from "../components/organisms/Hero";
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <GeneralHeader links={[]} />
+      <Header links={[]} />
 
       <Hero />
 
