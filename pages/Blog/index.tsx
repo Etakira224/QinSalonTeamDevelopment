@@ -1,11 +1,12 @@
 import { BlogSection } from "../../components/organisms/BlogSection";
-import { HeaderFooterTemplate } from "../../components/templates/HeaderFooterTemplate";
+import { Layout } from "../../components/templates/Layout";
 
 function Blog() {
   return (
-    <HeaderFooterTemplate>
+    <Layout>
       <BlogSection />
-    </HeaderFooterTemplate>
+      {/* 以下microCMS実装 */}
+    </Layout>
   );
 }
 
