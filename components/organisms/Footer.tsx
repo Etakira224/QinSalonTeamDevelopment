@@ -50,8 +50,7 @@ export function Footer({ links }: FooterSimpleProps) {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Text size="sm">© ️2022 Shimabu IT University</Text>
-        <Group className={classes.links}>{items}</Group>
+        <Text size="sm">&copy; 2022 Shimabu IT University</Text>
       </Container>
     </div>
   );
