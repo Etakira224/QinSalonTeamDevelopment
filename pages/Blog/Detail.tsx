@@ -1,11 +1,11 @@
 import { BlogCard } from "../../components/molecules/BlogCard";
-import { HeaderFooterTemplate } from "../../components/templates/HeaderFooterTemplate";
+import { Layout } from "../../components/templates/Layout";
 
 function Detail() {
   return (
-    <HeaderFooterTemplate>
+    <Layout>
       <BlogCard />
-    </HeaderFooterTemplate>
+    </Layout>
   );
 }
 

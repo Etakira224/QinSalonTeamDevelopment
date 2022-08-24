@@ -1,10 +1,10 @@
 import { Card, Text, Title } from "@mantine/core";
-import { HeaderFooterTemplate } from "../components/templates/HeaderFooterTemplate"
+import { Layout } from "../components/templates/Layout"
 
 function About() {
   return (
     //現在直打ちにしてあるけど、最終的には各ユーザーの情報をとってこられるように。
-    <HeaderFooterTemplate>
+    <Layout>
       <section>
         <Title order={2}>About</Title>
         <Card>
@@ -14,7 +14,7 @@ function About() {
           </article>
         </Card>
       </section>
-    </HeaderFooterTemplate>
+    </Layout>
   )
 }
 

@@ -1,11 +1,11 @@
 import { ContactForm } from "../components/organisms/ContactForm";
-import { HeaderFooterTemplate } from "../components/templates/HeaderFooterTemplate";
+import { Layout } from "../components/templates/Layout";
 
 function Contact() {
   return (
-    <HeaderFooterTemplate>
+    <Layout>
       <ContactForm />
-    </HeaderFooterTemplate>
+    </Layout>
   );
 }
 
