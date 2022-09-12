@@ -34,7 +34,6 @@ export const ModalMenu = () => {
         opened={opened}
         onClose={() => setOpened(false)}
         // className={classes.modal}
-        title="This is fullscreen modal!"
         fullScreen
         //色もまとめて管理しようよ.なぜか色が変わらない。
         overlayColor="#E64980"

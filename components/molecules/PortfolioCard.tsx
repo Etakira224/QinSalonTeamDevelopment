@@ -1,13 +1,17 @@
-import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
+import { Card, Text, Badge, Button, Group } from "@mantine/core";
+import Image from "next/image";
 
 export const PortfolioCard = () => {
   return (
     <Card shadow="sm" p="lg" radius="md" withBorder>
       <Card.Section>
+        {/* mantineのImageコンポをnextのものに変更し、画像をpublic参照 */}
         <Image
-          src="../../public/Thumbnail.png"
+          src="/Thumbnail.png"
           height={160}
-          alt="shimabu-AndHisArmy"
+          // width={100}
+          // fit="contain"
+          alt="shimabuArmy"
         />
       </Card.Section>
 

@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Footer } from "../components/organisms/Footer";
-import { GeneralHeader } from "../components/organisms/GeneralHeader";
+import { Header } from "../components/organisms/Header";
 import { HorizontalDevider } from "../components/atoms/HorizontalDevider";
 import styles from "../styles/Home.module.css";
 import { Hero } from "../components/organisms/Hero";
@@ -9,7 +9,7 @@ import { BlogSection } from "../components/organisms/BlogSection";
 import { PortfolioSection } from "../components/organisms/PortfolioSection";
 import { GitHubSection } from "../components/organisms/GitHubSection";
 import { TwitterSection } from "../components/organisms/TwitterSection";
-import { Grid } from "@mantine/core";
+import { Grid, Space } from "@mantine/core";
 
 const Home: NextPage = () => {
   return (
@@ -20,13 +20,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <GeneralHeader links={[]} />
+      <Header links={[]} />
 
       <Hero />
 
+      <Space h="xl" />
       <main className={styles.main}>
         {/* レイアウト変更に対応しやすくする目的で全セクションをグリッドで */}
-        <Grid grow>
+        <Grid grow gutter={50}>
           <Grid.Col lg={12} md={12}>
             <BlogSection />
           </Grid.Col>

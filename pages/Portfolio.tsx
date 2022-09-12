@@ -1,11 +1,11 @@
 import { PortfolioSection } from "../components/organisms/PortfolioSection";
-import { HeaderFooterTemplate } from "../components/templates/HeaderFooterTemplate"
+import { Layout } from "../components/templates/Layout"
 
 function Portfolio () {
   return (
-    <HeaderFooterTemplate>
+    <Layout>
       <PortfolioSection />
-    </HeaderFooterTemplate>
+    </Layout>
   )
 }
 
