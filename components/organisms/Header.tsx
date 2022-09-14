@@ -7,7 +7,7 @@ import {
   Container,
   Title,
 } from "@mantine/core";
-import {Header as MHeader} from "@mantine/core";
+import { Header as MHeader } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { ThemeColorToggle } from "../atoms/ThemeColorToggle";
@@ -73,8 +73,7 @@ interface HeaderSearchProps {
   }[];
 }
 
-
-export const MHeader = ({ links }: HeaderSearchProps) => {
+export const Header = ({ links }: HeaderSearchProps) => {
   const [opened, { toggle }] = useDisclosure(false);
   const { classes } = useStyles();
 
@@ -117,7 +116,7 @@ export const MHeader = ({ links }: HeaderSearchProps) => {
   //上でreturnしたitems変数を下のreturnで使っている感じ。
 
   return (
-    <Header height="fit-content" className={classes.header} mb={0}>
+    <MHeader height="fit-content" className={classes.header} mb={0}>
       <Container>
         <div className={classes.inner}>
           <Title order={2}>Shimabu IT University</Title>
@@ -130,6 +129,6 @@ export const MHeader = ({ links }: HeaderSearchProps) => {
           {/* <DarkColorToggle /> */}
         </div>
       </Container>
-    </Header>
+    </MHeader>
   );
 };
