@@ -1,5 +1,6 @@
 import { createStyles } from "@mantine/core";
 
+//footer中にfooterを入れるようなイメージになってしまい、混乱のもと？
 export const useStyles = createStyles((theme) => ({
   footer: {
     marginTop: 0,
