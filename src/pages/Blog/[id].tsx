@@ -1,6 +1,6 @@
 import { BlogCard } from "../../components/molecules/BlogCard";
 import { Layout } from "../../components/templates/Layout";
-import { client } from "../../libs/client";
+import { client } from "../../lib/client";
 
 function EachArticleDetail() {
   return (

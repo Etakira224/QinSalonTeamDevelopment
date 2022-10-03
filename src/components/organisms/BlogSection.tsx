@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { client } from "../../libs/client";
+import { client } from "../../lib/client";
 import { Title } from "@mantine/core";
 import { PrimaryButton } from "../atoms/PrimaryButton";
 import { BlogCard } from "../molecules/BlogCard";
@@ -10,6 +10,19 @@ const dummyGen = () => {
     items.push(<BlogCard />);
   }
   return <ul>{items}</ul>;
+};
+
+console.log(dummyGen);
+
+// microCMS関連
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "blogs" });
+
+  return {
+    props: {
+      data: data.contents,
+    },
+  };
 };
 
 //any型指定は修正必要
@@ -25,7 +38,7 @@ export const BlogSection = (data: any[]) => {
           {data.map((blog) => (
             <li key={blog.id}>
               <Link href={`/blog/${blog.id}`}>
-                <a >{blog.title}</a>
+                <a>{blog.title}</a>
               </Link>
             </li>
           ))}
@@ -35,16 +48,3 @@ export const BlogSection = (data: any[]) => {
     </div>
   );
 };
-
-// microCMS関連
-export const getStaticProps = async () => {
-  const data = await client.get({endpoint: "blogs"});
-
-  return {
-    props: {
-      data: data.contents,
-    }
-  }
-}
-
-

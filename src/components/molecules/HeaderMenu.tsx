@@ -42,7 +42,7 @@ export const HeaderMenu = () => {
     <Group>
       {navItems.map((item, i) => (
         <Link key={i} href={item.href}>
-          ,<a>{item.title}</a>
+          <a>{item.title}</a>
         </Link>
       ))}
     </Group>
